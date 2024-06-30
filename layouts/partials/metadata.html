@@ -1,0 +1,11 @@
+<div class="metadata">
+  <small
+    >{{ .PublishDate | time.Format ":date_short" }} ·
+    {{ .ReadingTime }}
+    minute{{ if (ne .ReadingTime 1) }}s{{ end }} ·
+    {{ range .Params.Tags }}
+      {{ $href := print (absURL "tags/") (urlize .) }}
+      <a class="tag" href="{{ $href }}">{{ . }} </a>
+    {{ end }}
+  </small>
+</div>

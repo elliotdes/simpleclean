@@ -1,0 +1,27 @@
+<header class="container">
+  <nav>
+    <ul>
+      <li>
+        <strong
+          >{{ if .IsHome }}
+            {{ site.Title }}
+          {{ else }}
+            {{ printf "%s / %s" site.Title
+              .Title
+            }}
+          {{ end }}
+        </strong>
+      </li>
+    </ul>
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li>
+          <a class="contrast" href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

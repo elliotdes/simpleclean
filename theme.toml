@@ -1,0 +1,19 @@
+description = 'A simple and clean Hugo theme.'
+license = 'MIT'
+licenselink = 'https://github.com/owner/repo/LICENSE'
+name = 'simpleclean'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/owner/repo'
+
+# If you have a running demo of the theme
+demosite = 'https://owner.github.io/repo'
+
+# Taxonomy terms
+features = ['tags', 'Google Analytics', 'comments', 'picocss']
+tags = ['minimalist']
+
+# If the theme has a single author
+[author]
+homepage = 'elliotdes.github.io'
+name = 'elliotdes'

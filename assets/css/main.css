@@ -1,0 +1,36 @@
+.tag {
+  display: inline-block;
+  vertical-align: central;
+  font-family: monospace;
+  font-size: 90%;
+  line-height: 1.5em;
+  padding: 0 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  --pico-background-color: var(--pico-secondary-background);
+  --pico-border-color: var(--pico-secondary-border);
+  --pico-color: var(--pico-secondary-inverse);
+
+  text-decoration: none;
+}
+
+.metadata {
+  margin-bottom: var(--pico-typography-spacing-vertical);
+}
+
+.post-hgroup {
+  margin-bottom: 0;
+}
+.post-title {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+}
+
+.mermaid {
+  text-align: center;
+}
