@@ -4,4 +4,23 @@
   <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
   {{ .Content }}
 </div>
+
+<div>
+  <h2>Recent Articles</h2>
+  {{ $recentPosts := first 3 .Site.RegularPages }} {{ range $recentPosts }}
+  <div class="post">
+    <hgroup class="post-hgroup">
+      <h3>
+        <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+    </hgroup>
+    {{ partial "metadata.html" . }}
+  </div>
+  {{ end }}
+
+  <h2>Top Tags</h2>
+  {{ $allTags := .Site.Taxonomies.tags.ByCount }} {{ range first 5 $allTags }}
+  <a class="tag" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+  {{ end }}
+</div>
 {{ end }}
